@@ -16,12 +16,16 @@
   --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
   --title-color: hsl(var(--hue-color), 8%, 15%);
   --text-color: hsl(var(--hue-color), 8%, 45%);
-  --text-color-light: hsl(var(--hue-color), 8%, 65%);
+  --text-color-light: hsl(var(--hue-color), 20%, 45%);
   --input-color: hsl(var(--hue-color), 70%, 96%);
-  --body-color: hsl(var(--hue-color), 60%, 99%);
+  --body-color: rgb(227, 169, 179);
   --container-color: #fff;
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+ 
+  /* Background Images */
+  --light-bg-image: url('img/bg.avif');
+  --dark-bg-image: url('img/bg1.avif');
 
   /*========= Font and typography ===========*/
   --body-font: "Poppins", sans-serif;
@@ -68,10 +72,11 @@
     --smaller-font-size: 0.813rem;
   }
 }
+
 /*================= Variables Dark Theme ===============*/
 body.dark-theme {
   /*========= HSL Color mode =========*/
-
+ 
   --first-color-second: hsl(var(--hue-color), 30%, 8%);
   --title-color: hsl(var(--hue-color), 8%, 95%);
   --text-color: hsl(var(--hue-color), 8%, 75%);
@@ -80,23 +85,10 @@ body.dark-theme {
   --container-color: hsl(var(--hue-color), 29%, 16%);
   --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
-}
-
-/*================= Button Dark/Light ===============*/
-.nav__btns {
-  display: flex;
-  align-items: center;
-}
-
-.change-theme {
-  font-size: 1.25rem;
-  color: var(--title-color);
-  margin-right: var(--mb-1);
-  cursor: pointer;
-}
-
-.change-theme:hover {
-  color: var(--first-color);
+ 
+  /* Background Image for Dark Theme */
+  background-image: var(--dark-bg-image);
+  background-size: cover;
 }
 
 /*================= Base ===============*/
@@ -114,9 +106,13 @@ body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
+  background-image: var(--light-bg-image); /* Background Image for Light Theme */
+  background-size: cover; /* Ensures the image covers the entire area */
+  background-position: center; /* Centers the background image */
   color: var(--text-color);
 }
 
+/* Other styles remain unchanged */
 h1,
 h2,
 h3,
@@ -140,7 +136,6 @@ img {
 .section__title {
   font-size: var(--h1-font-size);
 }
-
 .section__subtitle {
   display: block;
   font-size: var(--small-font-size);
@@ -228,9 +223,6 @@ img {
 .nav__icon {
   font-size: 1.2rem;
 }
-.nav__icon {
-  font-size: 1.2rem;
-}
 .nav__close {
   position: absolute;
   right: 1.3rem;
@@ -276,17 +268,16 @@ img {
 }
 
 .home__social-icon {
-  font-size: 1.05rem;
+  font-size: 2.0rem;
   color: var(--first-color);
 }
 .home__social-icon:hover {
-  color: var(--first-color-lighter);
+  color: black;
 }
 
 .home__blob {
   width: 200px;
   fill: var(--first-color);
-  /* fill: hsl(69, 69%, 61%); */
 }
 .home__blob-img {
   width: 180%;
@@ -298,7 +289,7 @@ img {
 }
 
 .home__title {
-  font-size: var(--big-font-size);
+  font-size:  var(--big-font-size);
 }
 .home__subtitle {
   font-size: var(--h3-font-size);
@@ -391,13 +382,11 @@ img {
 /*===================== About ==================*/
 .about__img {
   width: 170px;
-  height: 370px; /* Set height equal to width */
-  border-radius: 50%; /* Use 50% to create a circular shape */
-  object-fit: cover; /* Ensures the image fills the circle without distortion */
+  border-radius: 500%;
   justify-self: center;
   align-self: center;
+  /* border: 1px solid #fff; */
 }
-
 
 .about__description {
   text-align: center;
@@ -805,7 +794,7 @@ img {
 }
 
 .footer__bg {
-  background-color: var(--first-color-second);
+  background-color: rgb(153, 116, 218);
   padding: 2rem 0 3rem;
 }
 
@@ -825,7 +814,7 @@ img {
 }
 
 .footer__link:hover {
-  color: var(--first-color-lighter);
+  color: blue;
   transition: 0.3s;
 }
 
@@ -835,7 +824,7 @@ img {
 }
 
 .footer__social:hover {
-  color: var(--first-color-lighter);
+  color: blue;
   transition: 0.3s;
 }
 
@@ -850,7 +839,7 @@ img {
 .footer__link,
 .footer__subtitle,
 .footer__social {
-  color: #fff;
+  color: black;
 }
 
 /*==================== Scroll Up ==================*/
