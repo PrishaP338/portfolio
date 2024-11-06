@@ -24,8 +24,8 @@
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
  
   /* Background Images */
-  --light-bg-image: url('img/bg.avif');
-  --dark-bg-image: url('img/bg1.avif');
+  --light-bg-image: url('img/bg.png');
+  --dark-bg-image: url('img/bg1.jpeg');
 
   /*========= Font and typography ===========*/
   --body-font: "Poppins", sans-serif;
